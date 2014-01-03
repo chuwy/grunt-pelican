@@ -11,7 +11,7 @@
 var exec = require('child_process').exec;
 
 module.exports = function(grunt) {
-    grunt.registerTask('pelican', 'Grunt plugin for build Pelican static blog', function() {
+    grunt.registerMultiTask('pelican', 'Grunt plugin for build Pelican static blog', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var done = this.async()
 
