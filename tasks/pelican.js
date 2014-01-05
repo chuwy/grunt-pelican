@@ -21,15 +21,33 @@ module.exports = function(grunt) {
         });
 
         var cmd = 'pelican ';
+        var contentDir = '';
+        var configFile = '';
+        var outputDir = '';
+
         if ('contentDir' in options && typeof options.contentDir === 'string') {
-            cmd += options.contentDir;
+            contentDir = options.contentDir;
         }
+        if ('contneDir' in this.data && typeof this.data.contentDir === 'string') {
+            contnetDir = this.data.contentDir;
+        }
+        cmd += contentDir;
+
         if ('configFile' in options && typeof options.configFile === 'string') {
-            cmd += ' --settings ' + options.configFile;
+            configFile = options.configFile;
         }
+        if ('configFile' in this.data && typeof this.data.configFile === 'string') {
+            configFile = this.data.configFile;
+        }
+        cmd += ' --settings ' + configFile;
+
         if ('outputDir' in options && typeof options.outputDir === 'string') {
-            cmd += ' --output ' + options.outputDir;
+            outputDir = options.outputDir;
         }
+        if ('outputDir' in this.data && typeof this.data.outputDir === 'string') {
+            outputDir = this.data.outputDir;
+        }
+        cmd += ' --output ' + outputDir;
 
         var cp = exec(cmd, function (err, stdout, stderr) {
 
