@@ -1,7 +1,7 @@
 {
   "name": "grunt-pelican",
   "description": "Grunt plugin for build Pelican static blog",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/chuwy/grunt-pelican",
   "author": {
     "name": "Anton Parkhomenko",
