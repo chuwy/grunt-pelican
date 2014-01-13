@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 
         var cp = exec(cmd, function (err, stdout, stderr) {
 
-            grunt.log.writeln(cmd);
+            grunt.log.writeln('INFO: ' + cmd);
 
             if (typeof options.callback === 'function') {
                 options.callback.call(this, err, stdout, stderr, done)
@@ -59,9 +59,9 @@ module.exports = function(grunt) {
                 if (err && options.failOnError) {
                     grunt.warn(err);
                 }
-                done();
             }
-            grunt.log.writeln(stdout);
+            grunt.log.errorlns(stderr);
+            grunt.log.oklns(stdout);
         }.bind(this));
 
     });
