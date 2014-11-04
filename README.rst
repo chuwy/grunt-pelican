@@ -38,11 +38,16 @@ In your project's Gruntfile, add a section named `pelican` to the data object pa
   grunt.initConfig({
       pelican: {
           options: {
-              contentDir: '../output',
-              configPath: 'settings.py',
+              contentDir: '../content',
               outputDir: '/var/www/blog'
+          },
+          dev: {
+              configFile: 'settings.py'
+          },
+          dist: {
+              configFile: 'pelicanconf.py'
           }
-      },
+      }
   });
 
 
