@@ -58,6 +58,9 @@ module.exports = function(grunt) {
             } else {
                 if (err && options.failOnError) {
                     grunt.warn(err);
+                    done(false);
+                } else {
+                  done(true);
                 }
             }
             grunt.log.errorlns(stderr);
