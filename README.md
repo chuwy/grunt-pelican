@@ -1,32 +1,49 @@
-grunt-pelican
-=============
+# Grunt plugin for build Pelican static blog.
 
-Grunt plugin for build Pelican static blog.
+## Getting Started
 
-Getting Started
----------------
+This plugin requires Grunt \~0.4.1
 
-This plugin requires Grunt \`\~0.4.1\`
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins.
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to
-check out the [Getting Started](http://gruntjs.com/getting-started)
-guide, as it explains how to create a
-[Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and
-use Grunt plugins.
+Once you're familiar with that process, you may install this plugin with this command:
 
-Once you're familiar with that process, you may install this plugin with
-this command:
+~~~~ {.sourceCode .sh}
+~~~~
 
-Once the plugin has been installed, it may be enabled inside your
-Gruntfile with this line of JavaScript:
+> npm install grunt-pelican --save-dev
 
-The "pelican" task
-------------------
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+
+~~~~ {.sourceCode .javascript}
+~~~~
+
+> grunt.loadNpmTasks('grunt-pelican');
+
+## The "pelican" task
 
 ### Overview
 
-In your project's Gruntfile, add a section named \`pelican\` to the data
-object passed into \`grunt.initConfig()\`.
+
+In your project's Gruntfile, add a section named pelican to the data object passed into grunt.initConfig().
+
+~~~~ {.sourceCode .javascript}
+~~~~
+
+> grunt.initConfig({  
+> pelican: {  
+>   options: {  
+>     contentDir: '../content', 
+>     outputDir: '/var/www/blog'
+>   }, 
+>   dev: { 
+>     configFile: 'settings.py' 
+>   },
+>   dist: { 
+>     configFile: 'pelicanconf.py' 
+>   }
+> }
+> });
 
 ### Options
 
@@ -52,5 +69,4 @@ Type: `String`
 
 Pelican's default value: `output`
 
-Directory where pelican will put all your HTML, CSS etc. Usually your
-web server should point location to this dir.
+Directory where pelican will put all your HTML, CSS etc. Usually your web server should point location to this dir.

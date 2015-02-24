@@ -1,11 +1,11 @@
 {
   "name": "grunt-pelican",
   "description": "Grunt plugin for build Pelican static blog",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "homepage": "https://github.com/chuwy/grunt-pelican",
   "author": {
     "name": "Anton Parkhomenko",
-    "email": "mailbox@chuwy.ru"
+    "email": "mailbox@chuwy.me"
   },
   "repository": {
     "type": "git",
