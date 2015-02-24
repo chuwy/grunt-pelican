@@ -1,4 +1,4 @@
-# Grunt plugin for build Pelican static blog.
+# grunt-pelican
 
 ## Getting Started
 
@@ -8,42 +8,38 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 
 Once you're familiar with that process, you may install this plugin with this command:
 
-~~~~ {.sourceCode .sh}
-~~~~
-
-> npm install grunt-pelican --save-dev
+```shell
+npm install grunt-pelican --save-dev
+```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
-~~~~ {.sourceCode .javascript}
-~~~~
-
-> grunt.loadNpmTasks('grunt-pelican');
+```js
+grunt.loadNpmTasks('grunt-pelican');
+```
 
 ## The "pelican" task
 
 ### Overview
 
-
 In your project's Gruntfile, add a section named pelican to the data object passed into grunt.initConfig().
 
-~~~~ {.sourceCode .javascript}
-~~~~
-
-> grunt.initConfig({  
-> pelican: {  
->   options: {  
->     contentDir: '../content', 
->     outputDir: '/var/www/blog'
->   }, 
->   dev: { 
->     configFile: 'settings.py' 
->   },
->   dist: { 
->     configFile: 'pelicanconf.py' 
->   }
-> }
-> });
+```js
+grunt.initConfig({  
+  pelican: {  
+    options: {  
+      contentDir: '../content', 
+      outputDir: '/var/www/blog'
+    }, 
+    dev: { 
+      configFile: 'settings.py' 
+    },
+    dist: { 
+      configFile: 'pelicanconf.py' 
+    }
+  }
+});
+```
 
 ### Options
 
