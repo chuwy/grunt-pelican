@@ -13,7 +13,7 @@ var exec = require('child_process').exec;
 module.exports = function(grunt) {
     grunt.registerMultiTask('pelican', 'Grunt plugin for build Pelican static blog', function() {
         // Merge task-specific and/or target-specific options with these defaults.
-        var done = this.async()
+        var done = this.async();
 
         var options = this.options({
             punctuation: '.',
@@ -28,8 +28,8 @@ module.exports = function(grunt) {
         if ('contentDir' in options && typeof options.contentDir === 'string') {
             contentDir = options.contentDir;
         }
-        if ('contneDir' in this.data && typeof this.data.contentDir === 'string') {
-            contnetDir = this.data.contentDir;
+        if ('contentDir' in this.data && typeof this.data.contentDir === 'string') {
+            contentDir = this.data.contentDir;
         }
         cmd += contentDir;
 
